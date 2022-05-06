@@ -1,9 +1,7 @@
 // Functions/Task4.kt
 package functionsExercise4
 
-fun foo(): String {
-  return "abc"
-}
+fun foo() = "abc"
 
 fun main() {
   println(foo())
