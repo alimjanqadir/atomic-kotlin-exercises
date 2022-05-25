@@ -1,7 +1,7 @@
 // Booleans/Task2.kt
 package booleansExercise2
 
-fun showAnd() {}
+fun showAnd()
 
 fun showOr() {}
 
