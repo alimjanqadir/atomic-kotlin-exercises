@@ -4,7 +4,7 @@ files:
   visible: true
   placeholders:
   - offset: 48
-    length: 14
+    length: 13
     placeholder_text: fun showAnd() {}
     initial_state:
       length: 16
@@ -13,7 +13,7 @@ files:
     selected: true
     status: Failed
     encrypted_possible_answer: lD+1dP/HwmduQ/LBoBQeDGwu0KszA8Mq5vqclk6q1pJJdMzW27NLitP6XGdSDLAq3r7KEoNzQKSncTdXqPyh2WiQJgqrINewS7HGQdWWEmNhdjsbszdT6G1WPs2QBTq/KlYWWuiEhCD7oI3AV32roA==
-  - offset: 64
+  - offset: 63
     length: 15
     placeholder_text: fun showOr() {}
     initial_state:
@@ -23,7 +23,7 @@ files:
     selected: true
     status: Failed
     encrypted_possible_answer: 1VGEyOOlbZHkoz/d0XddwvxnyvLop/NXYptCY/hSw5RhSuLX7l6S4qCYmXuKDl1a2d2a2Bj5KCoLdT8ZI5Tmk0m61e4GKHy4D8WtUEGnjGtAVWd25PrEpv5qyUzP9BM39qF9S38p4dYk9Sq9+ESUcA==
-  - offset: 106
+  - offset: 105
     length: 6
     placeholder_text: TODO()
     initial_state:
