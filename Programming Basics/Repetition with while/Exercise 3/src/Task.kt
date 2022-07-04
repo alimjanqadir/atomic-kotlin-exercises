@@ -2,7 +2,13 @@
 package repetitionWithWhileExercise3
 
 fun sumOfEven(n: Int): Int {
-  TODO()
+  var i = 0
+  var sum = 0
+  while(i <= n) {
+    if(i % 2 == 0) sum += i
+    i += 1
+  }
+  return sum
 }
 
 fun main() {
