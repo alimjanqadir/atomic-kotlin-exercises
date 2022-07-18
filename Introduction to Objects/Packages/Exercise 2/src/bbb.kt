@@ -1,3 +1,6 @@
 // Packages/bbb.kt
 package bbb
-// TODO
+import aaa.K
+import aaa.fa
+
+fun g(i: Int) = "${K()} ${fa(i)}"

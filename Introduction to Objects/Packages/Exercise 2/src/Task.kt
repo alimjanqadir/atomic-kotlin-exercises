@@ -1,7 +1,7 @@
 // Packages/Task2.kt
 package ccc
-// TODO
+import bbb.g
 
 fun main() {
-  // TODO
+  println(g(1))
 }
