@@ -3,7 +3,23 @@ package listsExercise3
 import atomictest.eq
 
 fun checkAnagrams(s1: String, s2: String): Boolean {
-  TODO()
+  val counter = IntArray(26)
+  for(i in s1.indices) {
+    counter[s1[i] - 'a'] -= 1
+  }
+
+  for(i in s2.indices) {
+    counter[s2[i] - 'a'] += 1
+  }
+
+  var result = true
+  for(e in counter) {
+    if (e != 0) {
+      result = false
+      break
+    }
+  }
+  return result
 }
 
 fun main() {
