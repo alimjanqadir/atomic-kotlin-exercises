@@ -1,7 +1,9 @@
 // Varargs/Task2.kt
 package variableArgumentListsExercise2
 
-fun printArgs() {}
+fun printArgs(title: String, vararg numbers: Int) {
+    println("$title${numbers.toList()}")
+}
 
 fun main() {
 //  printArgs("Numbers: ", 1, 2, 3)
