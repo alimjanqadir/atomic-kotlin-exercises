@@ -4,9 +4,10 @@ import atomictest.eq
 
 class AccessCounter {
 
+  private var _accesses: Int = 0
 
   val accesses: Int
-    get() = TODO()
+    get() = ++_accesses
 }
 
 fun main() {
