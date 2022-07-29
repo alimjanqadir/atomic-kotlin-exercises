@@ -1,10 +1,19 @@
 // Summary2/Task4.kt
 package summaryIIExercise4
-import atomictest.capture
-import atomictest.eq
 import java.lang.IllegalArgumentException
 
-// TODO: add Dictionary class
+class Dictionary {
+    val translations: Map<String, List<String>>
+    get() = _translations
+
+    private val _translations = mutableMapOf<String, List<String>>()
+    fun addTranslations(word: String, translations: String) {
+        if(_translations.containsKey(word))
+            throw IllegalArgumentException("Dictionary already has translations for '$word'")
+
+        _translations[word] = translations.split(" ")
+    }
+}
 
 fun main() {
 /*
