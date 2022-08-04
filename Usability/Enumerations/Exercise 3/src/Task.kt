@@ -13,7 +13,17 @@ enum class Result {
 }
 
 fun winner(first: Rochambeau, second: Rochambeau): Result {
-  TODO()
+  if(first == second) return DRAW
+  val winningCombinations = mapOf(
+          ROCK to SCISSORS,
+          PAPER to ROCK,
+          SCISSORS to PAPER
+  )
+  return if(winningCombinations[first] == second) {
+    FIRST_WINS
+  } else {
+    SECOND_WINS
+  }
 }
 
 fun main() {
