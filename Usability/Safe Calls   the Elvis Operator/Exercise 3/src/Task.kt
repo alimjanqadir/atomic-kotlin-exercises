@@ -16,7 +16,13 @@ data class Address(
 
 
 
-fun Client.fullInfo(): String = TODO()
+fun Client.fullInfo(): String =
+        """name: $name
+          |email: ${personalInfo?.email ?: "Unspecified"}
+          |country: ${personalInfo?.address?.country ?: "Unspecified"}
+          |city: ${personalInfo?.address?.city ?: "Unspecified"}
+          |street: ${personalInfo?.address?.street ?: "Unspecified"}
+        """.trimMargin()
 
 fun main() {
   val alice = Client("Alice",
