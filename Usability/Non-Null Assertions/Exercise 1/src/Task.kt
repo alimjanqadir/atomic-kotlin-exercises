@@ -2,9 +2,13 @@
 package nonNullAssertionsExercise1
 import atomictest.*
 
-class Rocket
+class Rocket {
+    fun ignition(): String = "Liftoff!"
+}
 
-fun launch() {}
+fun launch(rocket: Rocket?): String {
+   return rocket!!.ignition()
+}
 
 fun main() {
 /*
