@@ -4,7 +4,9 @@ import atomictest.eq
 
 data class Container(val contents: Any?)
 
-// TODO Implement 'empty' and 'full' extension functions
+fun Container?.empty() = this == null || contents == null
+
+fun Container?.full() = !empty()
 
 fun main() {
 /*
