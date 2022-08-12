@@ -5,7 +5,7 @@ import atomictest.eq
 data class Student(val id: Int, val name: String)
 
 fun registerStudents(names: List<String>, startId: Int = 0): List<Student> =
-  TODO()
+  names.mapIndexed {index, name -> Student(startId + index, name)}
 
 fun main() {
   val students = listOf("Alice", "Bob")

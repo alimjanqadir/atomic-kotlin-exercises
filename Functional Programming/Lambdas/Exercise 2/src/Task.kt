@@ -7,7 +7,7 @@ data class Author(val name: String)
 data class Book(val title: String, val author: Author)
 
 fun getAuthors(books: List<Book>): Set<Author> =
-  TODO()
+  books.map { it.author }.toSet()
 
 fun main() {
   val books = listOf(
