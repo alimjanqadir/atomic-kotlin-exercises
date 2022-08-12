@@ -2,7 +2,8 @@
 package extensionPropertiesExercise2
 import atomictest.eq
 
-// TODO: implement 'reversed'
+val <T> List<T>.reversed: List<T>
+        get() = reversed()
 
 fun main() {
 /*
