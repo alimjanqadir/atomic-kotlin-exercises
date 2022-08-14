@@ -3,7 +3,7 @@ package operationsOnCollectionsExercise2
 import atomictest.eq
 
 val operation = { x: Int ->
-  TODO()
+  x % 5 == 0
 }
 
 fun main() {
