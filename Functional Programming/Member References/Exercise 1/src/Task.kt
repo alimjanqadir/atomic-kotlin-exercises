@@ -16,16 +16,16 @@ enum class Habitat {
 }
 
 fun List<Pet>.liveOnLand(): List<Pet> =
-  TODO()
+  filter(LAND::livesIn)
 
 fun List<Pet>.liveInWater(): List<Pet> =
-  TODO()
+  filter(WATER::livesIn)
 
 fun List<Pet>.areAmphibious(): List<Pet> =
-  TODO()
+  filter(AMPHIBIOUS::livesIn)
 
 fun List<Pet>.partitionAmphibious(): Pair<List<Pet>, List<Pet>> =
-  TODO()
+  partition(AMPHIBIOUS::livesIn)
 
 fun main() {
   val pets = listOf(
