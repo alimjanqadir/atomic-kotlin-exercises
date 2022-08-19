@@ -1,14 +1,14 @@
 // Sequences/Task2.kt
 package sequencesExercise2
 
-fun School.studentInstructors(
-  student: Student
-): Set<Instructor> {
-  TODO()
+fun School.studentInstructors(student: Student): Set<Instructor> {
+    return lessons.filter {
+        student in it.students
+    }.mapTo(mutableSetOf()) { it.instructor }
 }
 
-fun School.studentsOf(
-  instructor: Instructor
-): Set<Student> {
-  TODO()
+fun School.studentsOf(instructor: Instructor): Set<Student> {
+    return lessons.filter {
+        it.instructor == instructor
+    }.flatMapTo(mutableSetOf()) { it.students.asSequence() }
 }
