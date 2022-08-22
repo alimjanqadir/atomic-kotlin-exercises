@@ -4,7 +4,10 @@ import atomictest.eq
 
 fun fibonacci(): Sequence<Int> {
   var previous = 1
-  return generateSequence(0) { TODO()
+  return generateSequence(0) {  current ->
+    val next = previous + current
+    previous =  current
+    next
   }
 }
 
