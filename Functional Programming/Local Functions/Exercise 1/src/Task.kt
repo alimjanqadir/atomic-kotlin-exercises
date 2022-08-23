@@ -3,7 +3,9 @@ package localFunctionsExercise1
 import atomictest.eq
 
 fun f(): Int {
-  TODO()
+  fun g() = 47
+
+  return g()
 }
 
 fun main() {
