@@ -1,23 +1,27 @@
 // Interfaces/Task2.kt
 package interfacesExercise2
+
 import atomictest.eq
 
 interface Pet {
-  // TODO
+    fun speak(): String
 }
 
-class Dog: Pet {
-  // TODO
+class Dog : Pet {
+    override fun speak() = "Bark!"
 }
 
-class Cat: Pet {
-  // TODO
+
+class Cat : Pet {
+    override fun speak() = "Meow!"
+
 }
 
-class Hamster: Pet {
-  // TODO
+class Hamster : Pet {
+    override fun speak() = "Squeak!"
 }
 
 fun main() {
-  // TODO
+    val list = listOf<Pet>(Dog(), Cat(), Hamster())
+
 }
