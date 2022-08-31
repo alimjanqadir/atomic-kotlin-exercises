@@ -2,7 +2,12 @@
 package complexConstructorsExercise1
 import atomictest.eq
 
-// TODO class Alien
+class Alien(name: String) {
+    val myName: String
+    init {
+        myName = name
+    }
+}
 
 fun main() {
 /*

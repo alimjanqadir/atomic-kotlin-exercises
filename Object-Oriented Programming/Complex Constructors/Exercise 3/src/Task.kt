@@ -5,13 +5,13 @@ import atomictest.eq
 class MultipleInit {
   val initOrder = mutableListOf<String>()
   init {
-    // TODO
+    initOrder += "one"
   }
   init {
-    // TODO
+    initOrder += "two"
   }
   init {
-    // TODO
+    initOrder += "three"
   }
 }
 
