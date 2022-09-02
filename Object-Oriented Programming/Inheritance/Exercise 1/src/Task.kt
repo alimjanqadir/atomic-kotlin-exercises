@@ -3,7 +3,19 @@ package inheritanceExercise1
 import atomictest.eq
 
 open class Cleanser {
-  // TODO add property and functions
+ var ops = mutableListOf<String>()
+
+    fun dilute() {
+        ops += "dilute"
+    }
+
+    fun apply() {
+        ops += "apply"
+    }
+
+    fun scrub() {
+        ops += "scrub"
+    }
 }
 
 open class Detergent : Cleanser()
