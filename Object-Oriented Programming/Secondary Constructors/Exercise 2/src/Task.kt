@@ -3,7 +3,7 @@ package secondaryConstructorsExercise2
 import atomictest.eq
 
 data class SpaceShip(val name: String) {
-  // TODO add secondary constructor
+  constructor(shipClass: String, model: Int): this("$shipClass-$model")
 }
 
 fun main() {
