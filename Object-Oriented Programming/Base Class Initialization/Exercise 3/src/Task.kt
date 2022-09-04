@@ -1,8 +1,13 @@
 // BaseClassInit/Task3.kt
 package baseClassInitializationExercise3
+
 import atomictest.trace
 
-/* TODO: Implement Animal, Cat and Dog classes */
+open class Animal(open val sound: String = "???")
+
+class Cat(sound: String = "meow") : Animal(sound)
+
+class Dog(sound: String = "woof"): Animal(sound)
 
 fun main() {
 /*
@@ -13,5 +18,5 @@ fun main() {
   val dog = Dog()
   trace(dog.sound)
 */
-  trace eq "??? meow woof"
+    trace eq "??? meow woof"
 }
