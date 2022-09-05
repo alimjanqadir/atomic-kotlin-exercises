@@ -30,7 +30,7 @@ files:
       length: 37
       offset: 182
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: woBPM3Bx/aTzhGj94HUp+odo+UA28Ediflln4O+x3aA=
   - offset: 234
