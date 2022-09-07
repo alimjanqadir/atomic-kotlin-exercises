@@ -18,22 +18,25 @@ open class ActionCharacter {
   fun fight(): String = "ActionCharacter fight"
 }
 
-class Hero
+class Hero: ActionCharacter(), Fighter, Swimmer, Flyer {
+  override fun swim() = "Hero swim"
+  override fun fly() = "Hero fly"
+}
 
 fun tryFight(x: Fighter) {
-  TODO()
+  trace(x.fight())
 }
 
 fun trySwim(x: Swimmer) {
-  TODO()
+  trace(x.swim())
 }
 
 fun tryFly(x: Flyer) {
-  TODO()
+  trace(x.fly())
 }
 
 fun doAction(x: ActionCharacter) {
-  TODO()
+  trace(x.fight())
 }
 
 fun main() {
