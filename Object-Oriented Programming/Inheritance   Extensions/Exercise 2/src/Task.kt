@@ -17,15 +17,18 @@ class ToyDog : Dog() {
 }
 
 fun Dog.play() {
-  TODO()
+  speak()
+  sit()
 }
 
 fun RealDog.play() {
-  TODO()
+  play()
+  feed()
 }
 
 fun ToyDog.play() {
-  TODO()
+  play()
+  changeBatteries()
 }
 
 fun main() {
