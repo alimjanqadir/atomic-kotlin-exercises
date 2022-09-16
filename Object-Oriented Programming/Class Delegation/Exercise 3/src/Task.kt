@@ -12,11 +12,33 @@ interface B {
   fun baz()
 }
 
-class AA
+class AA: A {
+  override fun foo() {
+    trace("A.foo()")
+  }
 
-class BB
+  override fun bar() {
+    trace("A.bar()")
+  }
+}
 
-class Delegation
+class BB: B {
+  override fun foo() {
+    trace("B.foo()")
+  }
+
+  override fun baz() {
+    trace("B.baz()")
+  }
+}
+
+class Delegation(val a: AA, val b: BB): A by a, B by b  {
+  override fun foo() {
+    a.foo()
+    b.foo()
+   trace("Delegation.foo()")
+  }
+}
 
 fun main() {
 /*
