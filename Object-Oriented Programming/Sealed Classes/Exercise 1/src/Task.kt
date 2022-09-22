@@ -18,6 +18,7 @@ data class Bus(
 
 // class Tram
 
+
 // class Plane
 
 fun travel(transport: Transport) {
