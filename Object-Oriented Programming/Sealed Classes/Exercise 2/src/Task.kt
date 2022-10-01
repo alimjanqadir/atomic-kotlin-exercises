@@ -4,7 +4,9 @@ import sealedClassesExercise1.*
 import atomictest.*
 
 fun main() {
-  TODO()
+    Transport::class.sealedSubclasses.map {
+        trace(it.simpleName)
+    }
    trace eq """
     Train
     Bus
