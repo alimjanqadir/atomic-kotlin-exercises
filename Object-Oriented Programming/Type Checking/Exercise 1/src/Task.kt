@@ -3,25 +3,22 @@ package typeCheckingExercise1
 import atomictest.eq
 import typechecking.name
 
-sealed class Shape {
+interface Shape {
   fun draw() = "$name: Draw"
+  fun rotate() = ""
 }
 
-class Circle : Shape()
+class Circle : Shape
 
-class Square : Shape() {
-  fun rotate() = "Square: Rotate"
+class Square : Shape {
+  override fun rotate() = "Square: Rotate"
 }
 
-class Triangle : Shape() {
-  fun rotate() = "Triangle: Rotate"
+class Triangle : Shape {
+  override fun rotate() = "Triangle: Rotate"
 }
 
-fun turn(s: Shape) = when(s) {
-  is Circle -> ""
-  is Square -> s.rotate()
-  is Triangle -> s.rotate()
-}
+fun turn(s: Shape) = s.rotate()
 
 fun main() {
   val shapes = listOf(Circle(), Square())
