@@ -24,7 +24,8 @@ class GlassBottle : Bottle()
 sealed class PlasticBottle : Bottle()
 class PETBottle : PlasticBottle()
 class HDPEBottle : PlasticBottle()
-// class DecomposableBottle
+class DecomposableBottle: PlasticBottle()
+
 
 fun BeverageContainer.recycle2() =
   when(this) {
@@ -37,7 +38,7 @@ fun BeverageContainer.recycle2() =
       is PlasticBottle -> when(this) {
         is PETBottle -> "Recycle PET"
         is HDPEBottle -> "Recycle HDPE"
-        // TODO return "Decomposition tank" for DecomposableBottle
+        is DecomposableBottle -> "Decomposition tank"
       }
     }
   }

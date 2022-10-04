@@ -39,7 +39,9 @@ class HDPEBottle : PlasticBottle() {
   override fun recycle() = "Recycle HDPE"
 }
 
-// class DecomposableBottle
+class DecomposableBottle: PlasticBottle() {
+  override fun recycle() = "Decomposition Tank"
+}
 
 fun main() {
   val refrigerator = listOf(
