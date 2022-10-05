@@ -3,14 +3,14 @@ package typeCheckingExercise3
 import atomictest.eq
 import typechecking.name
 
-interface Insect {
+sealed class Insect {
   fun walk() = "$name: walk"
-  fun fly() = "$name: fly"
+  open fun fly() = "$name: fly"
 }
 
-class HouseFly : Insect
+class HouseFly : Insect()
 
-class Flea : Insect {
+class Flea : Insect() {
   override fun fly() =
     throw Exception("Flea cannot fly")
   fun crawl() = "Flea: crawl"
@@ -18,23 +18,23 @@ class Flea : Insect {
 
 fun Insect.basic() =
   walk() + " " +
-    if (this is Flea)
-    crawl()
-  else
-    fly()
+          when (this) {
+              is Flea -> crawl()
+              else -> fly()
+          }
 
-interface SwimmingInsect: Insect {
+interface SwimmingInsect {
   fun swim() = "$name: swim"
 }
 
-interface WaterWalker: Insect {
+interface WaterWalker {
   fun walkWater() =
     "$name: walk on water"
 }
 
-class WaterBeetle : SwimmingInsect
-class WaterStrider : WaterWalker
-class WhirligigBeetle : SwimmingInsect, WaterWalker
+class WaterBeetle : Insect(), SwimmingInsect
+class WaterStrider : Insect(), WaterWalker
+class WhirligigBeetle : Insect(), SwimmingInsect, WaterWalker
 
 fun Insect.water() =
   when(this) {
