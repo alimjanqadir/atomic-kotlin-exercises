@@ -23,17 +23,18 @@ class House: Cleanable("House") {
       listOf(Closet(), Bathroom())
     class Closet: Cleanable("Closet") {
       override val parts = listOf(
-        Shelf(), Shelf()/*TODO*/
+        Shelf(), Shelf(), Drawer(), Drawer()
       )
       class Shelf: Cleanable("Shelf")
-      /*TODO*/
+
+      class Drawer: Cleanable("Drawer")
     }
     class Bathroom: Cleanable("Bathroom") {
       override val parts =
-        listOf(Toilet(), Sink()/*TODO*/)
+        listOf(Toilet(), Sink(), Bathtub())
       class Toilet: Cleanable("Toilet")
       class Sink: Cleanable("Sink")
-      /*TODO*/
+      class Bathtub: Cleanable("Bathtub")
     }
   }
 }
