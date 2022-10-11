@@ -5,14 +5,18 @@ import atomictest.eq
 object Outer {
   object Nested {
     val a = "Outer.Nested.a"
-    /*TODO*/
+    object Nested {
+      val a = "Outer.Nested.Nested.a"
+    }
   }
 }
 
 class HasObject {
   object Nested {
     val a = "HasObject.Nested.a"
-    /*TODO*/
+    object Nested {
+      val a = "HasObject.Nested.Nested.a"
+    }
   }
 }
 
