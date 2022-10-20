@@ -4,16 +4,16 @@ files:
   visible: true
   placeholders:
   - offset: 159
-    length: 7
+    length: 0
     placeholder_text: // TODO
     initial_state:
       length: 7
       offset: 159
     initialized_from_dependency: false
-    selected: false
+    selected: true
     status: Unchecked
     encrypted_possible_answer: COMdt4/6xuTQMnAwyZ5IAGXZyXkHhSYbSOsIHZ7ovcHtiZFAKYl4TXIoZgepcDWO1Zht9YawkkIhS5+aafTIh2CZyZzvf286zX8uNyJnY2c0Lq7v8b1GEa0jcBO5eQbM0V4gnhFxMcRL6GYdA4BfYg/3tKWBR/M9/5kophW8yK3w3xAfU9TOzpZOn0mXrOsNjVnHS6l0RKq9aNy3kYG5a03acdMaoZ+UNETbeo2SCDtJh/AZk57JH01FJWsXSZCtnX71LymS0wDoYAlL4V7UEgo/Lh/SPK/0634lAjvHtFt4F9Z1W6JHC/Jxby+y2v0L+JXc4iVhYqgAnOqCbArgqKibmP3RWm7R4lB3FAXCmjDSzqAdbweCfXzjWOei0nC796EDN0tFb3M0QpyxEm7EPr/3udMsvIqdKtNx0H2GdsknY7HDBALeS4u7UuXUqBPtsPgdmlnd3b/anro+qtd2+V4Zc/kdIuuVZOeU5RjgwPnkz2RAXIArf5NrGChA3MxVhfTQR6a5Kn9pPb+K1JacSJxiVzaAfp9aWB5YwsjjN66mzhYmOTBmBHIYIhXHtR42azWqtAJscOx/DaDZrSGBhFlal2WzztcrWfC4zAwRzvd+uMDMB7XUeHZzgGaYLAa1r63Drtu025vTwgo4fFAj24pm+SOU9bpn2TPLbba78oJEvMyAHV4rQ7WP75uLgSBlNlVjGej0Ss+nW4AyIkGRLCzmjQtoYfaXgFgWZdBWOyroltB5hl6f8cDuSON76taZQwOJBpflbYVcxbrf2Mfj/xTxLgftsnpr9juX/FNTfTIb1LZv8SkK6hRfatAYFJxEnjJ/MUfOt0Zf6dKl3dkdHbdluWlivdhhba42gzLyTsA/iIvxF0CUaTtBybCl23fAUNAKZn/4zg0arNKbse63b4dz7tZAF//RbKHD+734FG77JnlIIGYBNKYN5fUD9SsETKKgTogdZAVlMtBrZUjgm9kO8+Hxkh9veZmaKHMg51Erkx7/i+bZ3YUoORsgPwZ9
-  - offset: 181
+  - offset: 174
     length: 320
     placeholder_text: |-
       /*
