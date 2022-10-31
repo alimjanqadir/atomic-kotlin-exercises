@@ -1,13 +1,34 @@
 // InnerClasses/InnerEx3.kt
 package innerClassesExercise3
-import atomictest.*
 
 interface Selector<T> {
-  fun end(): Boolean
-  fun current(): T
-  fun next()
+    fun end(): Boolean
+    fun current(): T
+    fun next()
 }
 
+class Container<T>(iterable: Iterable<T>) : Iterable<T> {
+    private val items = iterable.toMutableList()
+
+    fun selector(): Selector<T> = object : Selector<T> {
+        var i = 0
+
+        override fun end(): Boolean = current() == items.size;
+
+        override fun current(): T = items[i]
+
+        override fun next() {
+            if(i < items.size) i += 1
+        }
+    }
+
+
+    override fun iterator(): Iterator<T> = object : Iterator<T> {
+        var i = 0
+        override fun hasNext(): Boolean = i < items.size
+        override fun next(): T = items[i++]
+    }
+}
 
 
 fun main() {
