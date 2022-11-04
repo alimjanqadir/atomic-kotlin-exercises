@@ -1,8 +1,35 @@
 // CheckInstructions/CheckInstructionsSoln3.kt
 package checkInstructionsExercise3
+
 import atomictest.*
 
-// TODO class Level
+class Level(val range: IntRange, private var level: Int = range.start) {
+    val value: Int
+        get() = level
+
+    init {
+        require(level in range)
+    }
+
+    fun up(): Int {
+        if (level + 1 in range)
+            level += 1
+        return level
+    }
+
+    fun down(): Int {
+        if (level - 1 in range)
+            level -= 1
+        return level
+    }
+
+    fun set(new: Int) {
+        require(new in range) {
+            "set() argument out of range: $range"
+        }
+        level = new
+    }
+}
 
 fun main() {
 /*
