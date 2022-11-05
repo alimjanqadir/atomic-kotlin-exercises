@@ -1,27 +1,29 @@
 // NothingType/NothingTypeSoln3.kt
 package theNothingTypeExercise3
+
 import atomictest.*
 
-private var _debug: Boolean = TODO()
+private var _debug: Boolean = true
 
-class Failure
+class Failure(msg: String) : Exception(msg)
 
 fun fail(msg: String): Nothing =
-  TODO()
+        throw Failure(msg)
 
 fun debug(test: Boolean) {
-  TODO()
+    trace("debug($test) with _debug[$_debug]")
+    if (_debug && !test) fail("debug() failed")
 }
 
 fun main() {
-  debug(true)
-  capture {
+    debug(true)
+    capture {
+        debug(false)
+    } eq "Failure: debug() failed"
+    _debug = false
+    debug(true)
     debug(false)
-  } eq "Failure: debug() failed"
-  _debug = false
-  debug(true)
-  debug(false)
-  trace eq """
+    trace eq """
     debug(true) with _debug[true]
     debug(false) with _debug[true]
     debug(true) with _debug[false]
