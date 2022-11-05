@@ -22,7 +22,7 @@ class Tank(val capacity: Double) {
             level += maxLevel
         }
         check(level > 0) {
-            "Incorrect level: $e"
+            "Incorrect level: $level"
         }
 
         check(level <= maxLevel) {
