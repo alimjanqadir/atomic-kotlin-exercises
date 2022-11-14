@@ -1,8 +1,30 @@
 // OperatorOverloading/OpOverloadingSoln3.kt
 package operatorOverloadingExercise3
+
 import atomictest.*
 
-class Repository
+class Repository<T>(val initSize: Int = 0) {
+    private val list = mutableListOf<T>()
+
+    operator fun plusAssign(item: T) {
+        list += item
+    }
+
+    operator fun set(index: Int, item: T) {
+        require(index >= 0 && index < list.size)
+        requireNotNull(list[index])
+        list[index] = item
+    }
+
+    operator fun get(index: Int): T {
+        require(index >= 0 && index < list.size)
+        requireNotNull(list[index])
+        return list[index]
+    }
+
+    override fun toString() = "$list"
+
+}
 
 fun main() {
 /*
