@@ -1,19 +1,24 @@
 // PropertyDelegation/PropDelegationSoln4.kt
 package propertyDelegationExercise3
+
 import atomictest.eq
+import kotlin.properties.ReadWriteProperty
 import kotlin.reflect.KProperty
 
-class Holder<E> {
-  private var list = listOf<E>()
-  // TODO getValue and setValue extensions
+class Holder<E>: ReadWriteProperty<Holders, List<E>> {
+    private var list = listOf<E>()
+
+  override operator fun getValue(thisRef: Holders, property: KProperty<*>): List<E> = list
+
+  override operator fun setValue(thisRef: Holders, property: KProperty<*>, value: List<E>) {
+    list = value
+  }
 }
 
 class Holders {
-/*
-  var strings by Holder<String>()
-  var ints by Holder<Int>()
-  var bools by Holder<Boolean>()
-*/
+    var strings by Holder<String>()
+    var ints by Holder<Int>()
+    var bools by Holder<Boolean>()
 }
 
 fun main() {
