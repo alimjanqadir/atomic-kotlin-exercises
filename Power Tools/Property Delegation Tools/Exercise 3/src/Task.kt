@@ -4,11 +4,15 @@ import kotlin.properties.Delegates.observable
 import kotlin.reflect.KProperty
 import atomictest.*
 
-fun observe() {}
+fun <T> observe(
+        prop: KProperty<*>, old: T, new: T
+) {
+  trace("${prop.name} $old to $new")
+}
 
 class Product(nm: String = "<0>", id: Int = -1) {
-  var name = "" // by observable(nm, ::observe)
-  var ident = 0 // by observable(id, ::observe)
+  var name by observable(nm, ::observe)
+  var ident by observable(id, ::observe)
   override fun toString() = "$name $ident"
 }
 
