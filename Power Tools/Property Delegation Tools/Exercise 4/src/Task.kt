@@ -4,7 +4,9 @@ import atomictest.eq
 import kotlin.properties.Delegates
 
 class PositiveInt(i: Int) {
-  var n: Int = TODO() // by ...
+  var n: Int by Delegates.vetoable(i) {
+    _, _, new -> new > 0
+  }
 }
 
 fun main() {
