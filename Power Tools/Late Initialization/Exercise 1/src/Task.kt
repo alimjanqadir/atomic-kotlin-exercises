@@ -1,8 +1,20 @@
 // LateInitialization/LateInitSoln1.kt
 package lateInitializationExercise1
 
-// TODO
+interface PowerPlant
+class ElectricMotor : PowerPlant
+class CombustionEngine : PowerPlant
+
+class Vehicle {
+    lateinit var powerPlant: PowerPlant
+}
+
+lateinit var car: Vehicle
 
 fun main() {
-  // TODO
+    lateinit var truck: Vehicle
+    car = Vehicle()
+    car.powerPlant = ElectricMotor()
+    truck = Vehicle()
+    truck.powerPlant = CombustionEngine()
 }
