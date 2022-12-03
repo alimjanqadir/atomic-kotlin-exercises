@@ -6,19 +6,27 @@ data class Generator(val id: Int)
 
 class Turbine(val id: Int) {
   private lateinit var _generator: Generator
-  val generator: Generator = Generator(0) // TODO
+  val generator: Generator
+    get() {
+      if(!::_generator.isInitialized)
+        _generator = Generator(id)
+      return _generator
+    }
   override fun toString() =
-    "Generator $id running: " +
-    TODO()
+          "Generator $id running: " +
+                  "${::_generator.isInitialized}"
 }
 
 class PowerPlant(nTurbines: Int = 4) {
   private val turbines: List<Turbine> =
-    TODO()
+          List(nTurbines) { Turbine(it) }
   fun generator(number: Int): Generator {
-    TODO()
+    require(number in 0..turbines.size)
+    return turbines[number].generator
   }
-  fun status() = "TODO"
+  fun status() = turbines.forEach {
+    trace(it.toString())
+  }
 }
 
 fun main() {
